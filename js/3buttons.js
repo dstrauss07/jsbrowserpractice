@@ -6,21 +6,24 @@ getButton = document.getElementById("get"),
 textArea = document.getElementById("text-area");
 
 howdyButton.addEventListener("click",function(){
-var text = enterText.value;
-textArea.innerText = "Howdy " + text;
+    greet(howdyButton)
 });
 
+
 whatButton.addEventListener("click",function(){
-    var text = enterText.value;
-    textArea.innerText = "What You Want " + text + "?";
-    });
+    greet(whatButton)
+});
 
 byeButton.addEventListener("click",function(){
-        var text = enterText.value;
-        textArea.innerText = "Bye Bye " + text;
-        });
+    greet(byeButton)
+            });
+
 
 getButton.addEventListener("click",function(){
-            var text = enterText.value;
-            textArea.innerText = "Get Out " + text + "!";
+         greet(getButton)
             });
+
+var greet = function greet(button){
+    var text= enterText.value;
+    textArea.innerHTML = button.value + " " +text + "!";
+};
