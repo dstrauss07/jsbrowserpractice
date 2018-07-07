@@ -9,12 +9,20 @@
 <h2>Tip Calculator </h2>
 
 <div>
-<label>How Much was the Bill?</label><input type="number" id="bill-total">
+<label>How Much was the Bill?</label>
+<input type="number" id="bill-amount"> <br>
+Tip: <input type= "number" id="tip-percentage"> %
 <br>
-<button id="15-percent">15%</button><button id="20-percent">20%</button><button id="25-percent">25%</button>
+<br>
+<button id="custom-tip">Calculate Tip (custom)</button>
+<button id="fifteen-percent" value=".15">15%</button>
+<button id="twenty-percent" value=".2">20%</button>
+<button id="twentyfive-percent" value=".25">25%</button>
 </div>
+<h2>The Amount to Tip is:</h2>
 <div id="tip-total"></div>
-<div id="bill-total"></div>
+<h2>You Should pay:</h2>
+<div id="bill-total">$0.00</div>
 
 <script src="js/tip.js"></script>
 </body>
