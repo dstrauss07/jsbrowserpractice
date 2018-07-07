@@ -10,11 +10,17 @@ var billAmount = document.getElementById("bill-amount"),
 
     customTipButton.addEventListener("click", function(){
         var checkAmount = parseFloat(billAmount.value),
-            tipPercentage = parseFloat(customTip.value)/100,
-            tipAmountCustom = checkAmount *tipPercentage,
+        tipPercentage = parseFloat(customTip.value)/100;
+        if(isNaN(checkAmount)||isNaN(tipPercentage) ){
+            alert("Amount not a Number");
+            console.log("Error.Couldn't parese Number");
+            return;
+        };
+       
+          var  tipAmountCustom = checkAmount *tipPercentage,
             totalAmount= checkAmount + tipAmountCustom;
             tipTotal.innerHTML = tipAmountCustom;
-            billTotal.innerHTML = totalAmount;
+            billTotal.innerHTML = "<strong>Check Amount Amount: </strong> $" + checkAmount + "<br><br>" + "<strong>Tip Amount: </strong> $" + tipAmountCustom + "<br><br>" + "<strong>Total Amount: </strong> $" + totalAmount;
     });
 
 
